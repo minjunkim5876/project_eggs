@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-19T08:52:29.927Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="0wELyNgwx5GaxXcd_NN9" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-19T08:53:54.340Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Sr4DnEMjNRa6yPHLD3ol" version="21.6.8" type="github">
   <diagram name="페이지-1" id="XiU3vOUIBbdmcAZuaFP6">
     <mxGraphModel dx="1687" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,8 +10,8 @@
         <mxCell id="TMyp4y5NWIfxeU26x5db-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="TMyp4y5NWIfxeU26x5db-31" source="TMyp4y5NWIfxeU26x5db-7" target="TMyp4y5NWIfxeU26x5db-8">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="750" y="795" />
-              <mxPoint x="750" y="384" />
+              <mxPoint x="870" y="795" />
+              <mxPoint x="870" y="384" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -97,6 +97,9 @@
         </mxCell>
         <mxCell id="TMyp4y5NWIfxeU26x5db-56" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;로그들&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TMyp4y5NWIfxeU26x5db-31">
           <mxGeometry x="599.9960999305233" y="650.0035113475311" as="geometry" />
+        </mxCell>
+        <mxCell id="TMyp4y5NWIfxeU26x5db-62" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;종합된 로그들&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TMyp4y5NWIfxeU26x5db-31">
+          <mxGeometry x="859.9960999305233" y="560.003511347531" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
