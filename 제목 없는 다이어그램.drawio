@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-19T08:32:59.645Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="umEfokPa1Ts8Ryo8Aw5e" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-19T08:38:53.637Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="myWDPqBLHyzQyVghpo2e" version="21.6.8" type="github">
   <diagram name="페이지-1" id="XiU3vOUIBbdmcAZuaFP6">
     <mxGraphModel dx="1687" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -54,6 +54,18 @@
         </mxCell>
         <mxCell id="TMyp4y5NWIfxeU26x5db-39" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;service loadbalancer&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="TMyp4y5NWIfxeU26x5db-31">
           <mxGeometry x="130" y="500" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMyp4y5NWIfxeU26x5db-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="TMyp4y5NWIfxeU26x5db-31" source="TMyp4y5NWIfxeU26x5db-41" target="TMyp4y5NWIfxeU26x5db-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMyp4y5NWIfxeU26x5db-41" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;elastic search&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="TMyp4y5NWIfxeU26x5db-31">
+          <mxGeometry x="130" y="335" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TMyp4y5NWIfxeU26x5db-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="TMyp4y5NWIfxeU26x5db-31" source="TMyp4y5NWIfxeU26x5db-42" target="TMyp4y5NWIfxeU26x5db-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TMyp4y5NWIfxeU26x5db-42" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;kibana&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="TMyp4y5NWIfxeU26x5db-31">
+          <mxGeometry x="140" y="234.5" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
