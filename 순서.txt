@@ -12,3 +12,5 @@
 2.es-value.yaml
 3.fluent-bit.yaml
 4.kibana-value.yaml
+
+watch -n 1 kubectl get all -n logging
