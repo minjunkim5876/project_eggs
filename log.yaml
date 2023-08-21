@@ -39,8 +39,8 @@ spec:
         image: minjun5876/home:latest
         ports:
         - containerPort: 8080
-      # imagePullSecrets:
-      # - name: docker-pull-secret  
+      imagePullSecrets:
+      - name: docker-pull-secret  
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -68,6 +68,8 @@ spec:
         ports:
         - containerPort: 9200
         - containerPort: 9300
+      imagePullSecrets:
+      - name: docker-pull-secret  
 ---
 apiVersion: v1
 kind: Service
@@ -119,6 +121,8 @@ spec:
           value: http://elasticsearch-svc:9200
         ports:
         - containerPort: 5601
+      imagePullSecrets:
+      - name: docker-pull-secret    
 ---
 apiVersion: v1
 kind: Service
