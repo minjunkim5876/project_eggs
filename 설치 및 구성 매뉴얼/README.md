@@ -205,7 +205,7 @@
       namespace: logging
 
 
-### 플루언트디 데몬셋셋 YAML파일
+### 플루언트디 데몬셋 YAML파일
 
     apiVersion: apps/v1
     kind: DaemonSet
