@@ -1,4 +1,6 @@
-### 쿠버네티스 설치
+# 쿠버네티스 설치
+
+### 모든노드에 적용
 
     sudo apt update -y && sudo apt -y full-upgrade
     sudo apt install -y gnupg2 software-properties-common apt-transport-https ca-certificates
@@ -30,7 +32,7 @@
     sudo su - -c 'echo "192.168.10.11 kube-controller " >> /etc/hosts'
     sudo su - -c 'echo "192.168.10.12 kube-worker-node " >> /etc/hosts'
     
-# 쿠버네티스 컨트롤 플레인에만 적용
+### 쿠버네티스 컨트롤 플레인에만 적용
 
     sudo kubeadm config images pull
     sudo kubeadm init --apiserver-advertise-address 192.168.10.11 --pod-network-cidr 172.30.0.0/16 --upload-certs --control-plane-endpoint kube-controller > token.txt
