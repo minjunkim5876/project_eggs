@@ -3,7 +3,7 @@
 
 ```mermaid
 gantt
-    title 프로젝트 에그스
+    title 프로젝토 진행도
     dateFormat  YYYY-MM-DD
     section 기술 문서작성
     프로젝트제안서 작성 (30%) : a1, 2023-8-15, 1d
