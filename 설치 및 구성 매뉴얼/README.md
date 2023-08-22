@@ -56,26 +56,26 @@
       namespace: logging
       labels:
         app: elasticsearch
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: elasticsearch
-  template:
-    metadata:
-      labels:
-        app: elasticsearch
     spec:
-      containers:
-      - name: elasticsearch
-        image: elastic/elasticsearch:6.4.0
-        resources:
-          limits:
-            cpu: 1000m
-            memory: 3000Mi
-          requests:
-            cpu: 200m
-            memory: 500Mi
+      replicas: 1
+      selector:
+        matchLabels:
+          app: elasticsearch
+      template:
+        metadata:
+          labels:
+            app: elasticsearch
+        spec:
+          containers:
+          - name: elasticsearch
+            image: elastic/elasticsearch:6.4.0
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 3000Mi
+              requests:
+                cpu: 200m
+                memory: 500Mi
         env:
         - name: discovery.type
           value: single-node
