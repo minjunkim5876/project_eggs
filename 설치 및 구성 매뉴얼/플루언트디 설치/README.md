@@ -1,3 +1,39 @@
+# 플루언트디 설치
+### 서비스 어카운트 및 롤&롤바인 YAML파일
+
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: logging
+
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    metadata:
+      name: fluentd
+    rules:
+    - apiGroups:
+      - ""
+      resources:
+      - pods
+      - namespaces
+      verbs:
+      - get
+      - list
+      - watch
+
+    kind: ClusterRoleBinding
+    apiVersion: rbac.authorization.k8s.io/v1
+    metadata:
+      name: fluentd
+    roleRef:
+      kind: ClusterRole
+      name: fluentd
+      apiGroup: rbac.authorization.k8s.io
+    subjects:
+    - kind: ServiceAccount
+      name: fluentd
+      namespace: logging
+
 ### 플루언트디 데몬셋 YAML파일
 
     apiVersion: apps/v1
@@ -39,7 +75,24 @@
                 cpu: 500m
                 memory: 500Mi
               requests:
-                cpu: 그 YAML파일
+                cpu: 200m
+                memory: 500Mi
+            volumeMounts:
+            - name: varlog
+              mountPath: /var/log
+            - name: varlibdockercontainers
+              mountPath: /var/lib/docker/containers
+              readOnly: true
+          terminationGracePeriodSeconds: 30
+          volumes:
+          - name: varlog
+            hostPath:
+              path: /var/log
+          - name: varlibdockercontainers
+            hostPath:
+              path: /var/lib/docker/containers
+
+### 플루언트디 로그수집 건피그 YAML파일
 
     apiVersion: v1
     kind: ConfigMap
