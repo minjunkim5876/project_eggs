@@ -167,3 +167,62 @@
         app: elasticsearch
       type: NodePort
         
+# 플루언트디 설치
+
+### 서비스 어카운트 및 롤&롤바인 YAML파일
+
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: logging
+
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    metadata:
+      name: fluentd
+    rules:
+    - apiGroups:
+      - ""
+      resources:
+      - pods
+      - namespaces
+      verbs:
+      - get
+      - list
+      - watch
+
+    kind: ClusterRoleBinding
+    apiVersion: rbac.authorization.k8s.io/v1
+    metadata:
+      name: fluentd
+    roleRef:
+      kind: ClusterRole
+      name: fluentd
+      apiGroup: rbac.authorization.k8s.io
+    subjects:
+    - kind: ServiceAccount
+      name: fluentd
+      namespace: logging
+
+
+### 네임스페이스 YAML파일
+
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: fluentd
+      namespace: logging
+
+### 네임스페이스 YAML파일
+
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: logging
+
+### 네임스페이스 YAML파일
+
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: logging
