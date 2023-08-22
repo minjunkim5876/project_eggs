@@ -31,6 +31,7 @@
     sudo su - -c 'echo "192.168.10.12 kube-worker-node " >> /etc/hosts'
     
 ## 쿠버네티스 컨트롤 플레인에만 적용
+
     sudo kubeadm config images pull
     sudo kubeadm init --apiserver-advertise-address 192.168.10.11 --pod-network-cidr 172.30.0.0/16 --upload-certs --control-plane-endpoint kube-controller > token.txt
     mkdir -p $HOME/.kube
