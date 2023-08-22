@@ -76,12 +76,12 @@
               requests:
                 cpu: 200m
                 memory: 500Mi
-        env:
-        - name: discovery.type
-          value: single-node
-        ports:
-        - containerPort: 9200
-        - containerPort: 9300
-      imagePullSecrets:
-      - name: docker-pull-secret  
+            env:
+            - name: discovery.type
+              value: single-node
+            ports:
+            - containerPort: 9200
+            - containerPort: 9300
+          imagePullSecrets:
+          - name: docker-pull-secret  
         
