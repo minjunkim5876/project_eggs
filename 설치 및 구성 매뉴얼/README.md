@@ -50,7 +50,7 @@
 ### 엘라스틱서치 파드 YAML파일
 
     apiVersion: apps/v1
-kind: Deployment
+    kind: Deployment
 metadata:
   name: elasticsearch
   namespace: logging
