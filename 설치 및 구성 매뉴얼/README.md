@@ -86,7 +86,7 @@
           imagePullSecrets:
           - name: docker-pull-secret  
 
-### 로그수집용 웹 파드 서비스 YAML파일
+### 아파치 웹 파드 서비스 YAML파일
 
     apiVersion: v1
     kind: Service
