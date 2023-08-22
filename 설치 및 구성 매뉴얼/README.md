@@ -51,11 +51,11 @@
 
     apiVersion: apps/v1
     kind: Deployment
-metadata:
-  name: elasticsearch
-  namespace: logging
-  labels:
-    app: elasticsearch
+    metadata:
+      name: elasticsearch
+      namespace: logging
+      labels:
+        app: elasticsearch
 spec:
   replicas: 1
   selector:
