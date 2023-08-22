@@ -47,6 +47,63 @@
 
 # 엘라스틱서치 설치
 
+### 네임스페이스 YAML파일
+
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: logging
+
+### 아파치 웹 파드 YAML파일
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: web-example
+      namespace: logging
+    spec:
+      selector:
+        matchLabels:
+          app: web-example
+      replicas: 3
+      template:
+        metadata:
+          labels:
+            app: web-example
+        spec:
+          containers:
+          - name: web-example
+            image: httpd:latest
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1000Mi
+              requests:
+                cpu: 200m
+                memory: 500Mi
+            ports:
+            - containerPort: 8080
+          imagePullSecrets:
+          - name: docker-pull-secret  
+
+### 로그수집용 웹 파드 서비스 YAML파일
+
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: service-example
+      namespace: logging
+    spec:
+      selector:
+        app: web-example
+      ports:
+      - name: http
+        protocol: TCP
+        nodePort: 30000
+        port: 8080
+        targetPort: 80
+      type: LoadBalancer
+
 ### 엘라스틱서치 파드 YAML파일
 
     apiVersion: apps/v1
