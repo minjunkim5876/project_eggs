@@ -246,24 +246,7 @@
                 cpu: 500m
                 memory: 500Mi
               requests:
-                cpu: 200m
-                memory: 500Mi
-            volumeMounts:
-            - name: varlog
-              mountPath: /var/log
-            - name: varlibdockercontainers
-              mountPath: /var/lib/docker/containers
-              readOnly: true
-          terminationGracePeriodSeconds: 30
-          volumes:
-          - name: varlog
-            hostPath:
-              path: /var/log
-          - name: varlibdockercontainers
-            hostPath:
-              path: /var/lib/docker/containers
-
-### 플루언트디 로그수집 컨피 YAML파일
+                cpu: 그 YAML파일
 
     apiVersion: v1
     kind: ConfigMap
