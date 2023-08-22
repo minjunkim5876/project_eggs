@@ -84,4 +84,29 @@
             - containerPort: 9300
           imagePullSecrets:
           - name: docker-pull-secret  
+
+### 엘라스틱서치 서비스 YAML파일
+
+    apiVersion: v1
+    kind: Service
+    metadata:
+      labels:
+        app: elasticsearch
+      name: elasticsearch-svc
+      namespace: logging
+    spec:
+      ports:
+      - name: elasticsearch-rest
+        nodePort: 30920
+        port: 9200
+        protocol: TCP
+        targetPort: 9200
+      - name: elasticsearch-nodecom
+        nodePort: 30930
+        port: 9300
+        protocol: TCP
+        targetPort: 9300
+      selector:
+        app: elasticsearch
+      type: NodePort
         
