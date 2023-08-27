@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-08-23T00:41:37.667Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="P-FyCZxg0lZtUZfa8KOq" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-27T03:42:25.470Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="0q4npbSHLxRb6gZecxbH" version="21.6.8" type="github">
   <diagram name="페이지-1" id="XiU3vOUIBbdmcAZuaFP6">
-    <mxGraphModel dx="2049" dy="1117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,6 +123,18 @@
           <mxGeometry x="629.9960999305233" y="150.00351134753112" as="geometry">
             <mxPoint x="7" y="-3" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="3SxdGgVjXFjLfZuqVAYY-1" value="" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.hard_drive;fillColor=#637D8A;gradientColor=#324752;strokeColor=none;" vertex="1" parent="TMyp4y5NWIfxeU26x5db-31">
+          <mxGeometry x="292" y="250" width="62" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3SxdGgVjXFjLfZuqVAYY-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="TMyp4y5NWIfxeU26x5db-31" source="3SxdGgVjXFjLfZuqVAYY-2" target="TMyp4y5NWIfxeU26x5db-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3SxdGgVjXFjLfZuqVAYY-2" value="" style="swimlane;startSize=0;" vertex="1" parent="TMyp4y5NWIfxeU26x5db-31">
+          <mxGeometry x="273" y="225" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3SxdGgVjXFjLfZuqVAYY-5" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;퍼시스턴트 볼륨&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="TMyp4y5NWIfxeU26x5db-31">
+          <mxGeometry x="130" y="245" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
