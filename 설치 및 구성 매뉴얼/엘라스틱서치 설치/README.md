@@ -86,6 +86,13 @@
               requests:
                 cpu: 200m
                 memory: 500Mi
+            volumeMounts:
+            - name: nfs-volume
+              mountPath: /data/db
+          volumes:
+          - name: nfs-volume
+            persistentVolumeClaim:
+              claimName: nfs-pvc1
             env:
             - name: discovery.type
               value: single-node
@@ -112,23 +119,6 @@
         - nfsvers=4.1
       nfs:
         path: /mnt/nfs_share1
-        server: 192.168.10.14
-    ---
-    apiVersion: v1
-    kind: PersistentVolume
-    metadata:
-      name: nfs-pv2
-    spec:
-      capacity:
-        storage: 1Gi
-      volumeMode: Filesystem
-      accessModes:
-        - ReadWriteMany
-      persistentVolumeReclaimPolicy: Retain
-      mountOptions:
-        - nfsvers=4.1
-      nfs:
-        path: /mnt/nfs_share2
         server: 192.168.10.14
 
 ### 퍼시스턴트 볼륨 클레임 YAML파일
