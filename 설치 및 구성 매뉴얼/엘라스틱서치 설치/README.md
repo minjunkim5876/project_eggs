@@ -134,40 +134,19 @@
 ### 퍼시스턴트 볼륨 클레임 YAML파일
 
     apiVersion: apps/v1
-    kind: Deployment
+    apiVersion: v1
+    kind: PersistentVolumeClaim
     metadata:
-      name: elasticsearch
-      namespace: logging
-      labels:
-        app: elasticsearch
+      name: nfs-pvc1
     spec:
-      replicas: 1
-      selector:
-        matchLabels:
-          app: elasticsearch
-      template:
-        metadata:
-          labels:
-            app: elasticsearch
-        spec:
-          containers:
-          - name: elasticsearch
-            image: elastic/elasticsearch:6.4.0
-            resources:
-              limits:
-                cpu: 1000m
-                memory: 3000Mi
-              requests:
-                cpu: 200m
-                memory: 500Mi
-            env:
-            - name: discovery.type
-              value: single-node
-            ports:
-            - containerPort: 9200
-            - containerPort: 9300
-          imagePullSecrets:
-          - name: docker-pull-secret  
+      resources:
+        requests:
+          storage: 1Gi
+      volumeMode: Filesystem
+      accessModes:
+        - ReadWriteMany
+      volumeName: nfs-pv1
+      storageClassName: ""
 
 ### 엘라스틱서치 서비스 YAML파일
 
